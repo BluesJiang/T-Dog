@@ -11,6 +11,10 @@
     <title>hello</title>
   </head>
   <body>
+  <div class = "header">
+    <p>T-Dog</p>
+  </div>
+
   <%
     out.print("hello world");
   %>
