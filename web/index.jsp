@@ -13,7 +13,7 @@
   </head>
   <body>
 
-  <div id="header">
+  <div id = "header">
     <h1>T-Dog</h1>
     </div>
 
@@ -33,8 +33,8 @@
 
 
     <div id = "pushingmid">
-      <%for (int fontSize = 1; fontSize <=3 ; fontSize ++ ) {  %>
-       <span class= "item"> <img class = "iteming" src = "tm.png"/> </span>
+      <%for (int fontSize = 1; fontSize <=20 ; fontSize ++ ) {  %>
+       <span class = "item"> <img class = "iteming" src = "tm.png"/> </span>
       <%}%>
     </div>
 

@@ -1,14 +1,11 @@
 /*header*/
 #header {
-    background:lightsteelblue;
-    color: white;
-    padding-top:5px;
-    height:20px;
-    font-size: 10%;
+    background-color:black;
+    color:white;
     text-align:center;
+    padding:5px;
+    height:7px;
 }
-
-
 /*mid*/
 .mid {
     background:white;
@@ -50,9 +47,11 @@ img.guangao {
 
 
 .item {
-    height:400px;
-    width:220px;
-
+    border:1px solid #F00;
+    height:240px;
+    width:300px;
+    float:left;
+    display:block;
 }
 
 
@@ -62,8 +61,8 @@ img.iteming {
 }
 
 #pushingmid {
+    left:100px;
     position:absolute;
-    top:370px;
+    top:300px;
     text-align: center;
-    width:740px;
 }
