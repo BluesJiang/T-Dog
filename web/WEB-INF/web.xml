@@ -5,11 +5,11 @@
          version="3.1">
 
     <servlet>
-        <servlet-name>testServlet</servlet-name>
-        <servlet-class>servlet.testServlet</servlet-class>
+        <servlet-name>itemlist</servlet-name>
+        <servlet-class>servlet.FindItemList</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>testServlet</servlet-name>
-        <url-pattern>/testServlet</url-pattern>
+        <servlet-name>itemlist</servlet-name>
+        <url-pattern>/finditem</url-pattern>
     </servlet-mapping>
 </web-app>
