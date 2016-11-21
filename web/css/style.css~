@@ -1,0 +1,9 @@
+#header {
+    background:lightsteelblue;
+    color: white;
+    text-align: center;
+    padding:5px;
+    /*width: 200px;*/
+    /*height:20px;*/
+    font-size: 100%;
+}

@@ -8,11 +8,37 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>hello</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>T-Dog</title>
   </head>
   <body>
-  <%
-    out.print("hello world");
-  %>
+
+  <div id="header">
+    <h1>T-Dog</h1>
+    </div>
+
+
+    <div class = "mid">
+      <div id = "midleft"><img src = "tm.png"/> </div>
+      <div id = "miding"><img class="search" src = "search.png"></div>
+      <div id = "midright"><img class = "right" src = "tm.png"/></div>
+    </div>
+
+
+    <div>
+      <div class = "mid">
+      <img class="guangao" src = "iphone_guanggao.jpg"/>
+      </div>
+    </div>
+
+
+    <div id = "pushingmid">
+      <%for (int fontSize = 1; fontSize <=3 ; fontSize ++ ) {  %>
+       <span class= "item"> <img class = "iteming" src = "tm.png"/> </span>
+      <%}%>
+    </div>
+
+
+
   </body>
 </html>
