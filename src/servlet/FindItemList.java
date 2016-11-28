@@ -5,6 +5,9 @@ package servlet;
  * Created by Blues on 2016/11/14.
  */
 
+import DAClass.ItemDA;
+import PDClass.Item;
+
 import java.*;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -17,6 +20,7 @@ public class FindItemList extends HttpServlet {
     public void init() throws ServletException {
         super.init();
         System.out.println("testing");
+        ItemDA.init();
     }
 
     @Override
@@ -24,9 +28,11 @@ public class FindItemList extends HttpServlet {
         String keyword ;
         keyword = req.getParameter("keyword");
         System.out.println(keyword);
+        Item.init();
+        Item.findItemWithName(keyword);
         PrintWriter output = res.getWriter();
         res.setContentType("application/json");
-        output.print("{true}");
+        output.print("[true]");
         output.close();
         res.flushBuffer();
     }
