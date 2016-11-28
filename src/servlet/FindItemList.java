@@ -6,6 +6,7 @@ package servlet;
  */
 
 import DAClass.ItemDA;
+import PDClass.Item;
 
 import java.*;
 import java.io.IOException;
@@ -27,6 +28,8 @@ public class FindItemList extends HttpServlet {
         String keyword ;
         keyword = req.getParameter("keyword");
         System.out.println(keyword);
+        Item.init();
+        Item.findItemWithName(keyword);
         PrintWriter output = res.getWriter();
         res.setContentType("application/json");
         output.print("[true]");
