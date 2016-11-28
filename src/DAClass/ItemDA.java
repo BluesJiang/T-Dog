@@ -62,8 +62,6 @@ public class ItemDA {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-
         return items;
     }
 
