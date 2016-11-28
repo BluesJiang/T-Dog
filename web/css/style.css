@@ -3,17 +3,25 @@
     background-color:black;
     color:white;
     text-align:center;
-    padding:5px;
-    height:7px;
+    font-size: 1px;
 }
+
 /*mid*/
 .mid {
+    display:block;
     background:white;
     color: black;
     text-align: center;
     height:92px;
+
 }
+.guanggaomid {
+    top:200px;
+}
+
+
 #midleft {
+    display:block;
     width:260px;
     height:92px;
     position:absolute;
@@ -21,9 +29,10 @@
     top:60px;
 }
 #miding {
+    display:block;
     height: 81px;
     position: absolute;
-    left:560px;
+    left:600px;
     top:60px;
 }
 
@@ -32,6 +41,7 @@ img.search {
     width: 280px;
 }
 #midright {
+    display:block;
     width: 280px;
     height: 81px;
     position:absolute;
@@ -39,8 +49,10 @@ img.search {
     top:60px;
 }
 
+
+
 img.guangao {
-    height:100px;
+    height:141px;
 }
 
 /*前面的东东*/
