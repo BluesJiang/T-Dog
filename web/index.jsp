@@ -1,4 +1,5 @@
-<%--
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="PDClass.Item" %><%--
   Created by IntelliJ IDEA.
   User: Blues
   Date: 2016/11/12
@@ -25,7 +26,7 @@
       <%--<div id = "miding"><img class="search" src = "search.png"></div>--%>
       <span id = "miding">
         <form action = "finditem" method="get">
-            <input type="text", name="fname" />
+            <input type="text", name="keyword" />
             <input type="submit">
           </form>
         </span>
@@ -38,15 +39,25 @@
 
       </div>
     </div>
+    <%! ArrayList<Item> content; %>
+    <%
+      content = (ArrayList<Item>) request.getAttribute("result");
+      if (content == null) {
+        content = new ArrayList<Item>();
+      }
+    %>
 
 
 
     <div id = "pushingmid">
-      <%for (int fontSize = 1; fontSize <=20 ; fontSize ++ ) {  %>
+      <%for (int fontSize = 0; fontSize < content.size() ; fontSize ++ ) {  %>
 
       <span class = "item">
         <a href = "https://detail.tmall.com/item.htm?spm=a220m.1000858.1000725.1.LqWY8B&id=538207238901&skuId=3218944082365&standard=1&user_id=2616970884&cat_id=2&is_b=1&rn=d6f970436715787351d8f71dea69e861" class = "item">
-        <img class = "iteming" src = "//img.alicdn.com/bao/uploaded/i7/TB1opTlNXXXXXaYXXXXV8Gr9XXX_035038.jpg_b.jpg"/>
+        <%
+          out.print("<img class = \"iteming\" src = \"//" + content.get(fontSize).getThumbnailUrl() + "\"/>");
+
+        %>
           </a>
       </span>
 
