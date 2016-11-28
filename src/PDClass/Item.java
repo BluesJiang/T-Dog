@@ -73,6 +73,10 @@ public class Item {
     }
 
     static public ArrayList<Item> findItemWithName(String name) {
-        return ItemDA.findItemWithName(name);
+        ItemDA.init();
+        ArrayList<Item> result = ItemDA.findItemWithName(name);
+        ItemDA.terminate();
+
+        return result;
     }
 }

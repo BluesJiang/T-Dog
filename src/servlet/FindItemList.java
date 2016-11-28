@@ -11,6 +11,7 @@ import PDClass.Item;
 import java.*;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
@@ -28,12 +29,15 @@ public class FindItemList extends HttpServlet {
         String keyword ;
         keyword = req.getParameter("keyword");
         System.out.println(keyword);
-        Item.init();
-        Item.findItemWithName(keyword);
-        PrintWriter output = res.getWriter();
-        res.setContentType("application/json");
-        output.print("[true]");
-        output.close();
-        res.flushBuffer();
+
+        ArrayList<Item> content =  Item.findItemWithName(keyword);
+
+//        PrintWriter output = res.getWriter();
+//        res.setContentType("application/json");
+//        output.print("[true]");
+//        output.close();
+        RequestDispatcher rd = req.getRequestDispatcher("index.jsp");
+        req.setAttribute("result", content);
+        rd.forward(req, res);
     }
 }

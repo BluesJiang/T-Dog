@@ -24,10 +24,10 @@
       <span id = "midleft"><img src = "tm.png"/> </span>
       <%--<div id = "miding"><img class="search" src = "search.png"></div>--%>
       <span id = "miding">
-        <form action = "form_action.asp" method="get"></form>
-          <p>
+        <form action = "finditem" method="get">
             <input type="text", name="fname" />
-          </p>
+            <input type="submit">
+          </form>
         </span>
       <span id = "midright"><img class = "right" src = "tm.png"/></span>
     </div>

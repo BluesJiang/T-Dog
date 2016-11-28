@@ -62,9 +62,16 @@ public class ItemDA {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-
         return items;
     }
 
+    public static void terminate(){
+        try{
+            conn.close();
+            statement.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
