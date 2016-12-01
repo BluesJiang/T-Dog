@@ -32,13 +32,30 @@
     display:block;
     height: 81px;
     position: absolute;
-    left:600px;
+    left:500px;
     top:60px;
 }
+.input {
+    height:30px;
+    width:300px;
+    position: relative;
+    top:-19px;
+}
+
+
+.button {
+    height:1px;
+    width: 1px;
+}
+
+
 
 img.search {
-    height: 36px;
-    width: 280px;
+    position: relative;
+    left:-9px;
+    top:-2px;
+    height: 40px;
+    width: 100px;
 }
 #midright {
     display:block;
@@ -46,24 +63,31 @@ img.search {
     height: 81px;
     position:absolute;
     right:50px;
-    top:60px;
+    top:30px;
+}
+
+img.right {
+    height:80px;
+    width:190px;
 }
 
 
 
 img.guangao {
-    height:141px;
+    width:1720px;
+    height:110px;
 }
 
 /*前面的东东*/
 
 
 .item {
-    border:1px solid #F00;
-    height:240px;
+    border: 1px solid grey;
+    height:350px;
     width:300px;
     float:left;
     display:block;
+
 }
 
 
