@@ -84,7 +84,7 @@ public class Item {
         return result;
     }
 
-    public static Item findItemWithIndex(int id){
+    public static Item findItemWithID(String id){
         ItemDA.init();
         Item myResult =ItemDA.findItemWithID(id);
         ItemDA.terminate();

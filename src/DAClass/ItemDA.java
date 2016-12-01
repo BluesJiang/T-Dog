@@ -66,7 +66,7 @@ public class ItemDA {
     }
 
 
-    public static Item findItemWithID(int theID){
+    public static Item findItemWithID(String theID){
         Item myItem=new Item();
         String sql = "select id, tile,price,store,thumbnail_url,detail_image_url from itemtable where id='"+theID+"'";
         Statement mystmt;

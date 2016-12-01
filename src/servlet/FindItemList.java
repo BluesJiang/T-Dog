@@ -25,19 +25,25 @@ public class FindItemList extends HttpServlet {
     }
 
     @Override
-    public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String keyword ;
         keyword = req.getParameter("keyword");
-        System.out.println(keyword);
+        if (keyword != null) {
+            System.out.println(keyword);
 
-        ArrayList<Item> content =  Item.findItemWithName(keyword);
+            ArrayList<Item> content =  Item.findItemWithName(keyword);
+            RequestDispatcher rd = req.getRequestDispatcher("index.jsp");
+            req.setAttribute("result", content);
+            rd.forward(req, resp);
+        }
+        String id = req.getParameter("id");
+        if (id != null) {
+            System.out.println(id);
+            Item res = Item.findItemWithID(id);
+            RequestDispatcher rd = req.getRequestDispatcher("");
+            req.setAttribute("item", res);
+            rd.forward(req, resp);
+        }
 
-//        PrintWriter output = res.getWriter();
-//        res.setContentType("application/json");
-//        output.print("[true]");
-//        output.close();
-        RequestDispatcher rd = req.getRequestDispatcher("index.jsp");
-        req.setAttribute("result", content);
-        rd.forward(req, res);
     }
 }
