@@ -10,6 +10,7 @@ import java.*;
 import java.util.ArrayList;
 
 public class Item {
+    private int id;
     private String name;
     private String thumbnailUrl;
     private String detailImageUrl;
@@ -17,10 +18,10 @@ public class Item {
     private float price;
 
     public Item() {
-
     }
 
-    public Item(String name, String thumbnailUrl, String detailImageUrl, String store, float price) {
+    public Item(int id,String name, String thumbnailUrl, String detailImageUrl, String store, float price) {
+        this.id=id;
         this.name = name;
         this.thumbnailUrl = thumbnailUrl;
         this.detailImageUrl = detailImageUrl;
@@ -28,6 +29,9 @@ public class Item {
         this.price = price;
     }
 
+    public int getId() {return id;}
+
+    public void setId(int id){this.id=id;}
     public String getName() {
         return name;
     }
@@ -72,11 +76,20 @@ public class Item {
         ItemDA.init();
     }
 
-    static public ArrayList<Item> findItemWithName(String name) {
+
+    public static ArrayList<Item> findItemWithName(String name) {
         ItemDA.init();
         ArrayList<Item> result = ItemDA.findItemWithName(name);
         ItemDA.terminate();
-
         return result;
     }
+
+    public static Item findItemWithIndex(int id){
+        ItemDA.init();
+        Item myResult =ItemDA.findItemWithID(id);
+        ItemDA.terminate();
+        return myResult;
+    }
+
+
 }
