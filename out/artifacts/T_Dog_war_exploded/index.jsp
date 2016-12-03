@@ -25,6 +25,7 @@
       <span id = "midleft"><img src = "tm.png"/> </span>
       <%--<div id = "miding"><img class="search" src = "search.png"></div>--%>
       <span id = "miding">
+
         <form action = "finditem" method="get">
             <input class="input" type="text" name="keyword"/>
             <button class="button" type="submit"><img class="search" src="search.png"> </button>
@@ -56,8 +57,9 @@
 
       <span class = "item">
 
-        <a href = "https://detail.tmall.com/item.htm?spm=a220m.1000858.1000725.1.LqWY8B&id=538207238901&skuId=3218944082365&standard=1&user_id=2616970884&cat_id=2&is_b=1&rn=d6f970436715787351d8f71dea69e861">
+
         <%
+          out.print("<a href=\"/detail?id="+item.getId()+"\"/>");
           out.print("<img class = \"iteming\" src = \"//" + item.getThumbnailUrl() + "\"/>");
         %>
 

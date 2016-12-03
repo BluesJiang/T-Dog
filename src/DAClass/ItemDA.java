@@ -67,20 +67,19 @@ public class ItemDA {
 
 
     public static Item findItemWithID(String theID){
-        Item myItem=new Item();
-        String sql = "select id, tile,price,store,thumbnail_url,detail_image_url from itemtable where id='"+theID+"'";
-        Statement mystmt;
+        Item myItem = null;
+        String sql = "select * from itemtable where id="+theID;
+        System.out.println(sql);
+        Statement mystmt = null;
         try {
             mystmt = conn.createStatement();
         } catch (SQLException e) {
             e.printStackTrace();
-            mystmt = null;
         }
         try {
             ResultSet rs = mystmt.executeQuery(sql);
-            boolean got=rs.next();
-            if(got){
-                Item testItem=new Item();
+            if (rs.next()) {
+                myItem = new Item();
                 myItem.setId(rs.getInt("id"));
                 myItem.setName(rs.getString("title"));
                 myItem.setPrice(rs.getFloat("price"));
@@ -89,11 +88,15 @@ public class ItemDA {
                 myItem.setDetailImageUrl(rs.getString("detail_image_url"));
             }
 
+
             rs.close();
             mystmt.close();
         }
         catch (SQLException e) {
             e.printStackTrace();
+        }
+        if (myItem == null) {
+            return null;
         }
         return myItem;
     }

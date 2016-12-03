@@ -37,10 +37,11 @@ public class FindItemList extends HttpServlet {
             rd.forward(req, resp);
         }
         String id = req.getParameter("id");
+
         if (id != null) {
             System.out.println(id);
             Item res = Item.findItemWithID(id);
-            RequestDispatcher rd = req.getRequestDispatcher("");
+            RequestDispatcher rd = req.getRequestDispatcher("detailpage.jsp");
             req.setAttribute("item", res);
             rd.forward(req, resp);
         }

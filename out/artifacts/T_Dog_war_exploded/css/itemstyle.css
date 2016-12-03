@@ -1,6 +1,114 @@
-#header {
-    background:lavender;
-    color:black;
-    text-align:center;
-    font-size:3px;
+/*天猫图的框*/
+
+.hee {
+    top:26px;
+    position: absolute;
+    height:64px;
+    width:162px;
+    text-align: center;
 }
+
+img.tm {
+    height: 26px;
+    width: 165px;
+}
+
+/*270px;*/
+
+.mid {
+    top:200px;
+    position: absolute;
+    width:990px;
+    height: 920.19px;
+}
+
+
+.item {
+    border:1px;
+    height: 418px;
+    width: 418px;
+}
+
+/*右侧*/
+.midright {
+    left:500px;
+    top:0px;
+    position: absolute;
+    width: 530px;
+    height: 910px;
+
+}
+
+/*385 476*/
+.price {
+    position: absolute;
+    color:grey;
+    left:0px;
+    top:70px;
+    height:36px;
+    width:69px;
+    text-align: center;
+}
+
+
+
+
+.pricevalue {
+    position: absolute;
+    color:#FF0000;
+    left:100px;
+    top:30px;
+    height:36px;
+    width:69px;
+    text-align: center;
+}
+
+/*54+38=92+42= 134*/
+
+
+img.indexhead {
+    position: absolute;
+    width:510px;
+    height: 134px;
+    top:100px;
+    left:-10px;
+}
+
+/*42 42 35 75 = 84 110 = 194 -42 =152*/
+
+img.indexend {
+    position: absolute;
+    top:250px;
+    width: 500px;
+    height: 152px;
+    left: -10px;
+}
+
+img.iconpay {
+    top:430px;
+    position: absolute;
+    left:10px;
+    width:180px;
+    height: 40px;
+}
+
+img.iconadd {
+    top:430px;
+    width: 180px;
+    height: 40px;
+    position: absolute;
+    left:300px;
+}
+
+img.following {
+    top:500px;
+    width:490px;
+    height:56px;
+    position: absolute;
+    left:10px;
+}
+
+
+
+
+
